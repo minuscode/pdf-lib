@@ -646,7 +646,9 @@ export default class PDFForm {
       if (field.needsAppearancesUpdate()) {
         try {
           field.defaultUpdateAppearances(font);
-        } catch {}
+        } catch {
+          console.info('Error in defaultUpdateAppearances');
+        }
       }
     }
   }
